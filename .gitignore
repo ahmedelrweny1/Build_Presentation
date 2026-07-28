@@ -1,0 +1,14 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Node dependencies
+node_modules/
+npm-debug.log*

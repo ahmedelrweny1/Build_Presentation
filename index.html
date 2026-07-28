@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Tools That Make Student Life Easier | Interactive Keynote</title>
+  <meta name="description" content="A modern, animated, interactive conference-style keynote presentation for university students exploring real-world AI tools for studying, writing, research, and productivity.">
+  
+  <!-- Custom Fonts & Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Ambient Canvas & Victory Confetti Layers -->
+  <canvas id="bg-canvas"></canvas>
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Top Progress Bar -->
+  <div class="progress-bar-container">
+    <div class="progress-bar-fill" id="progress-bar-fill"></div>
+  </div>
+
+  <!-- Keynote Header Bar -->
+  <header class="presentation-header">
+    <div class="logo-badge" onclick="window.presentation?.goToSlide(0)">
+      <div class="logo-icon">⚡</div>
+      <span>STUDENT AI KEYNOTE</span>
+    </div>
+
+    <div class="slide-info-center">
+      <div class="slide-title-pill" id="slide-title-pill">Hero & Hook</div>
+      <div class="slide-counter" id="slide-counter">01 / 22</div>
+    </div>
+
+    <div class="header-controls">
+      <button class="icon-btn" id="toc-toggle-btn" title="Table of Contents Drawer">📑</button>
+      <button class="icon-btn" id="sound-toggle-btn" title="Sound Effects">🔔</button>
+      <button class="icon-btn" id="theme-toggle-btn" title="Toggle Light/Dark Theme">☀️</button>
+    </div>
+  </header>
+
+  <!-- Presentation Main Container -->
+  <main class="presentation-container">
+
+    <!-- ==========================================
+         SLIDE 1: HERO & HOOK
+         ========================================== -->
+    <section class="slide active" id="slide-1" data-title="Hero & Hook">
+      <div class="slide-content hero-content">
+        <div class="hero-badge">🚀 UNIVERSITY KEYNOTE PRESENTATION</div>
+        <h1 class="hero-title">
+          "AI Won't Replace Students...<br>
+          <span class="gradient-text">Students Using AI Will."</span>
+        </h1>
+        <p class="slide-subheading">
+          Welcome to the non-technical guide to studying smarter, finishing assignments 5x faster, and reclaiming your weekends. Zero coding required.
+        </p>
+
+        <div style="font-size: 3.8rem; margin: 12px 0; filter: drop-shadow(0 12px 24px rgba(0,242,254,0.35));">
+          🎓 ✨ 🧠
+        </div>
+
+        <div class="hero-cta-group">
+          <button class="nav-btn hero-btn" onclick="window.presentation?.nextSlide()">
+            <span>Start Exploring</span>
+            <span>➔</span>
+          </button>
+        </div>
+
+        <p class="nav-hint" style="margin-top: 18px; justify-content: center; font-size:0.95rem;">
+          Press <span class="kbd-badge">Space</span> or <span class="kbd-badge">➔</span> on your keyboard to navigate
+        </p>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 2: STUDENT MEME SPOTLIGHT (SINGLE VIDEO 1)
+         ========================================== -->
+    <section class="slide" id="slide-2" data-title="Student Meme Spotlight">
+      <div class="slide-content">
+        <div class="slide-tag">🎬 STUDENT MEME SPOTLIGHT • REALITY CHECK</div>
+        <h2 class="slide-heading">University Student Life: Expectation vs. Reality</h2>
+        <p class="slide-subheading">Before we dive into the AI toolkit, let's address the real daily struggle every university student experiences!</p>
+
+        <div class="glass-card meme-video-card" style="width:100%; max-width:850px; text-align:center; padding:20px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+            <span style="font-size:0.85rem; font-weight:800; color:var(--accent-pink); background:rgba(255,0,122,0.15); padding:4px 14px; border-radius:100px; border:1px solid rgba(255,0,122,0.35);">🎬 STUDENT MEME SPOTLIGHT</span>
+            <span style="font-size:0.85rem; font-weight:700; color:var(--text-primary);">"8 AM Camera On Reality"</span>
+          </div>
+
+          <video class="meme-video-player" style="max-height:450px;" controls autoplay muted loop playsinline preload="auto">
+            <source src="ssstik.io_1785180197024.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+          <p style="font-size:0.95rem; color:var(--text-secondary); margin-top:14px; line-height:1.5;">
+            😂 <em>When 8 AM online lectures hit and the professor insists everyone turns their camera on...</em>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 3: RELATABLE STUDENT NIGHTMARES
+         ========================================== -->
+    <section class="slide" id="slide-3" data-title="Relatable Problems & Tools">
+      <div class="slide-content">
+        <div class="slide-tag">😭 SOUND FAMILIAR?</div>
+        <h2 class="slide-heading">The 2 AM Student Struggle</h2>
+        <p class="slide-subheading">Here is the exact AI tool to solve every real university panic moment.</p>
+
+        <div class="problems-grid">
+          <div class="glass-card problem-card">
+            <div class="problem-icon">⏰</div>
+            <h3>"I forgot tomorrow's quiz!"</h3>
+            <p style="color:var(--text-secondary); font-size:0.95rem;">50 pages of slides unread and zero time.</p>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:8px;">
+              <span class="problem-status">CRITICAL PANIC</span>
+              <span style="font-size:0.85rem; font-weight:800; color:var(--accent-cyan); background:rgba(0,242,254,0.15); padding:4px 10px; border-radius:6px; border:1px solid rgba(0,242,254,0.3);">🛠️ USE: NotebookLM</span>
+            </div>
+          </div>
+
+          <div class="glass-card problem-card">
+            <div class="problem-icon">📑</div>
+            <h3>"I have a 30-page dense PDF"</h3>
+            <p style="color:var(--text-secondary); font-size:0.95rem;">Reads like ancient Latin; exam in 2 days.</p>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:8px;">
+              <span class="problem-status">BRAIN FOG</span>
+              <span style="font-size:0.85rem; font-weight:800; color:var(--accent-purple); background:rgba(127,0,255,0.15); padding:4px 10px; border-radius:6px; border:1px solid rgba(127,0,255,0.3);">🛠️ USE: Claude 3.5</span>
+            </div>
+          </div>
+
+          <div class="glass-card problem-card">
+            <div class="problem-icon">📊</div>
+            <h3>"Need slides in 20 minutes"</h3>
+            <p style="color:var(--text-secondary); font-size:0.95rem;">Group presentation next period; blank deck.</p>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:8px;">
+              <span class="problem-status">DESIGN PANIC</span>
+              <span style="font-size:0.85rem; font-weight:800; color:var(--accent-emerald); background:rgba(0,245,160,0.15); padding:4px 10px; border-radius:6px; border:1px solid rgba(0,245,160,0.3);">🛠️ USE: Gamma.app</span>
+            </div>
+          </div>
+
+          <div class="glass-card problem-card">
+            <div class="problem-icon">🤯</div>
+            <h3>"I don't understand the professor"</h3>
+            <p style="color:var(--text-secondary); font-size:0.95rem;">Jargon heavy lecture; lost on slide 4.</p>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:8px;">
+              <span class="problem-status">LOST IN CLASS</span>
+              <span style="font-size:0.85rem; font-weight:800; color:var(--accent-cyan); background:rgba(0,242,254,0.15); padding:4px 10px; border-radius:6px; border:1px solid rgba(0,242,254,0.3);">🛠️ USE: ChatGPT</span>
+            </div>
+          </div>
+
+          <div class="glass-card problem-card">
+            <div class="problem-icon">📚</div>
+            <h3>"5 assignments due at midnight"</h3>
+            <p style="color:var(--text-secondary); font-size:0.95rem;">Essays, lab reports & group chats buzzing.</p>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:8px;">
+              <span class="problem-status">OVERWHELM</span>
+              <span style="font-size:0.85rem; font-weight:800; color:var(--accent-amber); background:rgba(255,184,0,0.15); padding:4px 10px; border-radius:6px; border:1px solid rgba(255,184,0,0.3);">🛠️ USE: Motion / Notion</span>
+            </div>
+          </div>
+
+          <div class="glass-card problem-card">
+            <div class="problem-icon">🫠</div>
+            <h3>"Zero motivation left"</h3>
+            <p style="color:var(--text-secondary); font-size:0.95rem;">Starting sentence feels impossible.</p>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:8px;">
+              <span class="problem-status">WRITER'S BLOCK</span>
+              <span style="font-size:0.85rem; font-weight:800; color:var(--accent-pink); background:rgba(255,0,122,0.15); padding:4px 10px; border-radius:6px; border:1px solid rgba(255,0,122,0.3);">🛠️ USE: ChatGPT / Claude</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 4: HOW AI HELPS (WORKFLOW WITH TOOLS)
+         ========================================== -->
+    <section class="slide" id="slide-4" data-title="How AI Helps">
+      <div class="slide-content">
+        <div class="slide-tag">⚡ THE AI FORMULA</div>
+        <h2 class="slide-heading">How AI Solves Your Day</h2>
+        <p class="slide-subheading">Match your exact problem to the specialized AI tool built to solve it.</p>
+
+        <div class="workflow-container">
+          <div class="glass-card workflow-step">
+            <div class="workflow-icon">😫</div>
+            <h3 style="color:var(--text-primary); margin-bottom:8px;">1. Real Problem</h3>
+            <p style="color:var(--text-secondary); font-size:0.95rem;">Stuck on a 40-page paper, lab report, or presentation outline.</p>
+          </div>
+
+          <div class="workflow-arrow">➔</div>
+
+          <div class="glass-card workflow-step" style="border-color:var(--accent-cyan);">
+            <div class="workflow-icon" style="background:var(--gradient-purple);">🤖</div>
+            <h3 style="color:var(--accent-cyan); margin-bottom:8px;">2. Pick Specialized AI Tool</h3>
+            <div style="display:flex; flex-wrap:wrap; gap:6px; justify-content:center; margin-top:6px;">
+              <span class="price-tag" style="font-size:0.75rem;">NotebookLM</span>
+              <span class="price-tag" style="font-size:0.75rem;">Perplexity</span>
+              <span class="price-tag" style="font-size:0.75rem;">Gamma</span>
+            </div>
+          </div>
+
+          <div class="workflow-arrow">➔</div>
+
+          <div class="glass-card workflow-step" style="border-color:var(--accent-emerald);">
+            <div class="workflow-icon" style="background:var(--gradient-emerald);">🎉</div>
+            <h3 style="color:var(--accent-emerald); margin-bottom:8px;">3. Supercharged Result</h3>
+            <p style="color:var(--text-secondary); font-size:0.95rem;">Master the concept in 15 mins, ace the quiz, and enjoy your weekend!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 5: MEET CHATGPT
+         ========================================== -->
+    <section class="slide" id="slide-5" data-title="Meet ChatGPT">
+      <div class="slide-content">
+        <div class="slide-tag">🤖 THE STARTER PACK</div>
+        <h2 class="slide-heading">Meet ChatGPT & Claude: Your All-In-One Tutors</h2>
+        <p class="slide-subheading">Learn how to prompt ChatGPT (GPT-4o) and Claude 3.5 Sonnet for maximum academic power.</p>
+
+        <div class="prompt-comparison">
+          <div class="prompt-box bad">
+            <div class="prompt-header bad">❌ BAD PROMPT (What Most Students Do)</div>
+            <p style="color:var(--text-secondary); font-family:monospace; font-size:0.95rem; margin-bottom:12px;">"Write my history paper about World War 2."</p>
+            <p style="font-size:0.9rem; color:#f43f5e;"><strong>Result:</strong> Generic, robotic, detectable text that sounds like a Wikipedia article.</p>
+          </div>
+
+          <div class="prompt-box good">
+            <div class="prompt-header good">✓ GOOD PROMPT (Smarter Student Approach)</div>
+            <p style="color:var(--text-secondary); font-family:monospace; font-size:0.95rem; margin-bottom:12px;">"Act as a university history tutor. Explain the 3 main economic causes of WW2 in simple terms with bullet points and real-world analogies."</p>
+            <p style="font-size:0.9rem; color:#00f5a0;"><strong>Result:</strong> Clear, highly structured, easy-to-digest study notes in seconds!</p>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:14px; margin-top:24px; flex-wrap:wrap; justify-content:center;">
+          <span class="slide-title-pill" style="font-size:0.9rem; padding:6px 16px;">💡 Explaining Lectures (ChatGPT)</span>
+          <span class="slide-title-pill" style="font-size:0.9rem; padding:6px 16px;">📝 Solving Math Step-by-Step (ChatGPT)</span>
+          <span class="slide-title-pill" style="font-size:0.9rem; padding:6px 16px;">✍️ Essay Drafting (Claude 3.5)</span>
+          <span class="slide-title-pill" style="font-size:0.9rem; padding:6px 16px;">📧 Professional Emails (ChatGPT)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 6: PROMPT ENGINEERING
+         ========================================== -->
+    <section class="slide" id="slide-6" data-title="Prompt Engineering">
+      <div class="slide-content">
+        <div class="slide-tag">🎯 THE SECRET SAUCE • COMPATIBLE WITH CHATGPT, CLAUDE & GEMINI</div>
+        <h2 class="slide-heading">The Master Prompt Formula</h2>
+        <p class="slide-subheading">How to ask any AI model (ChatGPT, Claude, Gemini) so you get S-Tier answers every single time.</p>
+
+        <div class="interactive-builder glass-card">
+          <div class="builder-controls">
+            <div class="builder-group">
+              <label>1. ROLE</label>
+              <select id="prompt-role" class="builder-select">
+                <option value="experienced biology professor">Biology Professor</option>
+                <option value="strict essay editor">Strict Essay Editor</option>
+                <option value="friendly peer study partner">Peer Study Partner</option>
+              </select>
+            </div>
+
+            <div class="builder-group">
+              <label>2. TASK</label>
+              <input type="text" id="prompt-task" class="builder-input" value="Explain how neural networks work">
+            </div>
+
+            <div class="builder-group">
+              <label>3. CONTEXT</label>
+              <select id="prompt-context" class="builder-select">
+                <option value="zero prior tech background">Zero technical background</option>
+                <option value="first year computer science student">First year CS student</option>
+              </select>
+            </div>
+
+            <div class="builder-group">
+              <label>4. OUTPUT FORMAT</label>
+              <select id="prompt-format" class="builder-select">
+                <option value="a 3-bullet point summary with an everyday analogy">3 Bullet points + Everyday Analogy</option>
+                <option value="a practice 5-question multiple choice quiz">5-Question Practice Quiz</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="prompt-preview-box">
+            <div>
+              <div style="color:var(--text-muted); font-size:0.8rem; margin-bottom:8px;">GENERATE MASTER PROMPT:</div>
+              <div id="generated-prompt-output">...</div>
+            </div>
+            <button class="nav-btn secondary" id="copy-prompt-btn" style="margin-top:16px; align-self:flex-start;">
+              <span>📋 Copy Master Prompt</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 7: AI FOR STUDYING (WIDE MATRIX)
+         ========================================== -->
+    <section class="slide" id="slide-7" data-title="AI for Studying">
+      <div class="slide-content">
+        <div class="slide-tag">🧠 STUDY MATRIX</div>
+        <h2 class="slide-heading">The Big 4 Study Tools</h2>
+        <p class="slide-subheading">Which AI tool should you open right now? Here is your quick decision cheatsheet.</p>
+
+        <div class="matrix-grid">
+          <div class="glass-card">
+            <div class="tool-card-header">
+              <h3>ChatGPT</h3>
+              <span class="price-tag">Free / $20</span>
+            </div>
+            <p style="color:var(--accent-cyan); font-weight:800; font-size:0.9rem;">BEST TOOL FOR: All-Around Homework & Math</p>
+            <p style="color:var(--text-secondary); font-size:0.9rem; margin-top:8px;">Great at math, coding, brainstorming, and plain explanations.</p>
+          </div>
+
+          <div class="glass-card">
+            <div class="tool-card-header">
+              <h3>NotebookLM</h3>
+              <span class="price-tag">100% Free</span>
+            </div>
+            <p style="color:var(--accent-emerald); font-weight:800; font-size:0.9rem;">BEST TOOL FOR: PDF Slides & Audio Podcasts</p>
+            <p style="color:var(--text-secondary); font-size:0.9rem; margin-top:8px;">Google’s AI that ONLY reads your uploaded class documents without making stuff up.</p>
+          </div>
+
+          <div class="glass-card">
+            <div class="tool-card-header">
+              <h3>Perplexity</h3>
+              <span class="price-tag">Free / Pro</span>
+            </div>
+            <p style="color:var(--accent-amber); font-weight:800; font-size:0.9rem;">BEST TOOL FOR: Live Research & Cited Answers</p>
+            <p style="color:var(--text-secondary); font-size:0.9rem; margin-top:8px;">Combines web search with AI so every answer has direct clickable source links.</p>
+          </div>
+
+          <div class="glass-card">
+            <div class="tool-card-header">
+              <h3>Claude 3.5</h3>
+              <span class="price-tag">Free / $20</span>
+            </div>
+            <p style="color:var(--accent-purple); font-weight:800; font-size:0.9rem;">BEST TOOL FOR: Academic Writing & Essays</p>
+            <p style="color:var(--text-secondary); font-size:0.9rem; margin-top:8px;">Extremely natural, human-sounding writing and deep logical paper analysis.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 8: AI FOR PRESENTATIONS (WIDE STUDIO)
+         ========================================== -->
+    <section class="slide" id="slide-8" data-title="AI for Presentations">
+      <div class="slide-content">
+        <div class="slide-tag">📊 TOOLS: GAMMA.APP • CANVA AI • BEAUTIFUL.AI • SLIDESAI</div>
+        <h2 class="slide-heading">Build Instant AI Presentation Decks</h2>
+        <p class="slide-subheading">Upload notes or enter a topic, pick your style, and let AI build your visual presentation slides in 10 seconds!</p>
+
+        <!-- Interactive AI Presentation Studio Generator -->
+        <div class="interactive-builder glass-card" style="margin-bottom:20px;">
+          <div class="builder-controls">
+            <div class="builder-group">
+              <label>1. PRESENTATION TOPIC / LECTURE NOTES</label>
+              <input type="text" id="gen-topic-input" class="builder-input" value="Photovoltaic Energy Systems & Clean Grid" placeholder="e.g. History of World War 2, Neuroscience Fundamentals...">
+            </div>
+
+            <div class="builder-group">
+              <label>2. SELECT AI PRESENTATION TOOL</label>
+              <select class="builder-select">
+                <option value="gamma">Gamma.app (Best overall AI Slide Deck builder)</option>
+                <option value="canva">Canva AI (Magic Presentation Designer)</option>
+                <option value="beautiful">Beautiful.ai (Smart Visual Slide Layouts)</option>
+                <option value="slidesai">SlidesAI (Google Slides Add-on)</option>
+              </select>
+            </div>
+
+            <div class="builder-group">
+              <label>3. VISUAL THEME STYLE</label>
+              <select id="gen-style-select" class="builder-select">
+                <option value="dark">Sleek Dark Keynote (Apple Style)</option>
+                <option value="neon">Cyber Neon Glow</option>
+              </select>
+            </div>
+
+            <button class="nav-btn" id="gen-slides-btn" style="margin-top:8px;">
+              <span>✨ Build 3-Slide AI Deck (via Gamma / Canva AI)</span>
+            </button>
+            <div id="gen-status-box" style="font-size:0.85rem; margin-top:6px;"></div>
+          </div>
+
+          <div id="deck-preview-container" style="width:100%;">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- Before / After Slider -->
+        <div class="slider-container" id="slider-container">
+          <div class="slider-before">
+            <h3 style="color:#f43f5e; margin-bottom:10px;">❌ Old Manual PowerPoint (3 Hours Work)</h3>
+            <ul style="line-height:1.7; font-size:0.9rem;">
+              <li>Paragraphs of tiny black text on white background</li>
+              <li>Spent 3 hours formatting shapes and bullet points</li>
+              <li>Audience is sleeping by slide 3</li>
+            </ul>
+          </div>
+
+          <div class="slider-after" id="slider-after">
+            <h3 style="color:var(--accent-cyan); margin-bottom:10px;">✨ AI Keynote via Gamma / Canva AI (10 Sec)</h3>
+            <div style="background:rgba(255,255,255,0.12); padding:16px; border-radius:14px; border:1px solid rgba(255,255,255,0.25);">
+              <h4 style="font-size:1.3rem; color:#fff;">🚀 Photovoltaic Energy Systems</h4>
+              <p style="color:var(--accent-emerald); font-weight:800; margin-top:4px; font-size:0.95rem;">+300% Engagement • Built Automatically</p>
+            </div>
+          </div>
+
+          <div class="slider-handle" id="slider-handle">
+            <div class="slider-handle-button">↔</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 9: AI FOR NOTES (WIDE SIMULATOR)
+         ========================================== -->
+    <section class="slide" id="slide-9" data-title="AI for Notes">
+      <div class="slide-content">
+        <div class="slide-tag">📄 TOOLS: NOTEBOOKLM • CHATGPT • NOTION AI</div>
+        <h2 class="slide-heading">Turn 50-Page PDFs into Instant Study Packs</h2>
+        <p class="slide-subheading">NotebookLM & ChatGPT convert raw PDF lectures into summaries, flashcards, and quizzes.</p>
+
+        <div class="note-sim-grid">
+          <div class="pdf-dropzone glass-card" id="pdf-dropzone">
+            <span style="font-size:3rem;">📥</span>
+            <h4 style="color:var(--text-primary); font-size:1.1rem;">Click to Simulate PDF Upload</h4>
+            <p style="font-size:0.85rem; color:var(--text-muted);">Biology_Lecture_Ch12.pdf (12.4 MB)</p>
+            <span class="price-tag" style="font-size:0.75rem;">Processed by NotebookLM</span>
+          </div>
+
+          <div class="glass-card" style="display:flex; flex-direction:column;">
+            <div class="output-tabs">
+              <button class="tab-btn active" data-tab="summary">⚡ Summary (NotebookLM)</button>
+              <button class="tab-btn" data-tab="flashcards">🎴 Flashcards (ChatGPT)</button>
+              <button class="tab-btn" data-tab="mindmap">🧠 Mind Map (Notion AI)</button>
+              <button class="tab-btn" data-tab="quiz">📝 Quiz (NotebookLM)</button>
+            </div>
+
+            <div id="note-output-display" style="flex:1;">
+              <h4 style="color:var(--accent-cyan); margin-bottom:10px; font-size:1.15rem;">⚡ Instant 2-Minute Executive Summary</h4>
+              <p style="margin-bottom:8px; font-size:0.95rem;"><strong>Core Concept:</strong> Photosynthesis converts light energy into chemical energy stored in glucose.</p>
+              <ul style="padding-left:20px; color:var(--text-secondary); font-size:0.95rem; line-height:1.7;">
+                <li>Light-Dependent Reactions occur in thylakoid membranes (creates ATP & NADPH).</li>
+                <li>Calvin Cycle takes place in the stroma (fixes CO2 into sugar).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 10: AI FOR RESEARCH
+         ========================================== -->
+    <section class="slide" id="slide-10" data-title="AI for Research">
+      <div class="slide-content">
+        <div class="slide-tag">🔍 TOOLS: PERPLEXITY AI • CONSENSUS • ELICIT</div>
+        <h2 class="slide-heading">Google Search vs. Perplexity AI</h2>
+        <p class="slide-subheading">Stop opening 25 browser tabs just to find one cited answer for your university assignment.</p>
+
+        <div class="showdown-grid">
+          <div class="glass-card showdown-box" style="border-color:rgba(244,63,94,0.35);">
+            <h4 style="color:#f43f5e;">🌐 Traditional Google Search</h4>
+            <ul style="line-height:2.1; color:var(--text-secondary); font-size:0.95rem;">
+              <li>❌ 10 Sponsored Blue Ads</li>
+              <li>❌ Click 15 articles with SEO fluff</li>
+              <li>❌ Manually read 5,000 words</li>
+              <li>❌ Format citations yourself</li>
+            </ul>
+          </div>
+
+          <div class="glass-card showdown-box" style="border-color:rgba(0,245,160,0.35);">
+            <h4 style="color:var(--accent-emerald);">⚡ Perplexity & Consensus AI</h4>
+            <ul style="line-height:2.1; color:var(--text-secondary); font-size:0.95rem;">
+              <li>✓ Direct synthesized answer in 3 seconds</li>
+              <li>✓ Inline bracket citations [1], [2] to peer-reviewed papers</li>
+              <li>✓ Follow-up question breakdown</li>
+              <li>✓ Export citations directly in APA/MLA format</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 11: AI FOR WRITING
+         ========================================== -->
+    <section class="slide" id="slide-11" data-title="AI for Writing">
+      <div class="slide-content">
+        <div class="slide-tag">✍️ TOOLS: GRAMMARLY • CLAUDE 3.5 • QUILLBOT • DEEPL</div>
+        <h2 class="slide-heading">Polishing Essays & Email Doctor</h2>
+        <p class="slide-subheading">Use Grammarly, QuillBot, Claude & DeepL to transform messy draft sentences into academic gold.</p>
+
+        <div class="writing-tool-box glass-card">
+          <div>
+            <label style="font-size:0.9rem; font-weight:800; color:var(--accent-cyan); display:block; margin-bottom:8px;">YOUR RAW DRAFT SENTENCE:</label>
+            <textarea id="writing-input" style="width:100%; height:110px; background:rgba(0,0,0,0.35); border:1px solid var(--border-color); border-radius:12px; padding:12px; color:var(--text-primary); font-family:inherit; font-size:0.95rem;">hey prof can we talk about my essay paper grade during office hours thanks</textarea>
+            
+            <div style="display:flex; gap:8px; margin-top:12px;">
+              <button class="tab-btn writing-mode-btn active" data-mode="polish">✨ Grammarly Polish</button>
+              <button class="tab-btn writing-mode-btn" data-mode="simplify">⚡ QuillBot Simplify</button>
+              <button class="tab-btn writing-mode-btn" data-mode="expand">📜 Claude Expand</button>
+            </div>
+          </div>
+
+          <div>
+            <label style="font-size:0.9rem; font-weight:800; color:var(--accent-emerald); display:block; margin-bottom:8px;">AI ENHANCED OUTPUT:</label>
+            <div id="writing-output" style="background:#0d1117; border:1px solid var(--border-color); border-radius:12px; padding:14px; height:110px; font-family:monospace; color:#38bdf8; font-size:0.95rem; line-height:1.5;">
+              I am writing to inquire if there might be an opportunity to discuss my recent essay assignment during your upcoming office hours.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 12: AI FOR IMAGES
+         ========================================== -->
+    <section class="slide" id="slide-12" data-title="AI for Images">
+      <div class="slide-content">
+        <div class="slide-tag">🎨 TOOLS: CHATGPT (DALL-E 3) • ADOBE FIREFLY • CANVA AI • IDEOGRAM</div>
+        <h2 class="slide-heading">AI Image & Diagram Creation</h2>
+        <p class="slide-subheading">Need custom illustrations or infographics for your poster presentation? Generate them in seconds.</p>
+
+        <div class="image-showcase-grid">
+          <div class="image-card" style="background-image:linear-gradient(135deg, #00f2fe, #7f00ff);">
+            <div class="image-card-overlay">
+              <strong style="font-size:1rem;">ChatGPT DALL-E 3</strong><br>
+              "3D Glassmorphism brain diagram for neuroscience poster"
+            </div>
+          </div>
+
+          <div class="image-card" style="background-image:linear-gradient(135deg, #ff007a, #ffb800);">
+            <div class="image-card-overlay">
+              <strong style="font-size:1rem;">Adobe Firefly</strong><br>
+              "Clean vector graphic of renewable solar grid"
+            </div>
+          </div>
+
+          <div class="image-card" style="background-image:linear-gradient(135deg, #00f5a0, #00d2ff);">
+            <div class="image-card-overlay">
+              <strong style="font-size:1rem;">Ideogram 2.0</strong><br>
+              "Typography poster design with crisp readable text"
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 13: AI FOR VIDEOS
+         ========================================== -->
+    <section class="slide" id="slide-13" data-title="AI for Videos">
+      <div class="slide-content">
+        <div class="slide-tag">🎬 TOOLS: CAPCUT AI • RUNWAY GEN-2 • OTTER.AI • HEYGEN</div>
+        <h2 class="slide-heading">CapCut & Runway: Video Powerups</h2>
+        <p class="slide-subheading">Turn 2-hour recorded zoom lectures into 3-minute TikTok-style summaries with auto captions.</p>
+
+        <div class="matrix-grid">
+          <div class="glass-card">
+            <h3 style="color:var(--accent-cyan); margin-bottom:8px;">⚡ CapCut AI Captions</h3>
+            <p style="color:var(--text-secondary); font-size:0.95rem;">Auto-transcribe presentation recordings and generate animated captions in 1 click.</p>
+          </div>
+
+          <div class="glass-card">
+            <h3 style="color:var(--accent-purple); margin-bottom:8px;">🎥 Runway Gen-2</h3>
+            <p style="color:var(--text-secondary); font-size:0.95rem;">Generate realistic motion background video clips from simple text prompts.</p>
+          </div>
+
+          <div class="glass-card">
+            <h3 style="color:var(--accent-emerald); margin-bottom:8px;">🎙️ Otter.ai / AudioPen</h3>
+            <p style="color:var(--text-secondary); font-size:0.95rem;">Record in-person lectures and automatically export clean, structured meeting notes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 14: AI FOR ORGANIZATION (WIDE SCHEDULE)
+         ========================================== -->
+    <section class="slide" id="slide-14" data-title="AI for Organization">
+      <div class="slide-content">
+        <div class="slide-tag">🗓️ TOOLS: NOTION AI • MOTION • GOOGLE GEMINI • CHATGPT</div>
+        <h2 class="slide-heading">Smart Study Schedule Builder</h2>
+        <p class="slide-subheading">Let Motion, Notion AI & ChatGPT balance your classes, study hours, and social life automatically.</p>
+
+        <div class="glass-card" style="width:100%; max-width:1500px; text-align:center;">
+          <p style="color:var(--text-secondary); margin-bottom:16px; font-size:1rem;">Click below to build an optimized student weekly schedule (powered by Notion AI & Motion algorithm):</p>
+          <button class="nav-btn" id="generate-schedule-btn" style="margin:0 auto;">
+            <span>✨ Generate Weekly Schedule (Motion & Notion AI)</span>
+          </button>
+
+          <div id="schedule-result-box" style="margin-top:20px;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 15: REAL STUDENT WORKFLOW (WIDE TIMELINE)
+         ========================================== -->
+    <section class="slide" id="slide-15" data-title="Real Student Workflow">
+      <div class="slide-content">
+        <div class="slide-tag">⏱️ 7-DAY TIMELINE & TOOL MAP</div>
+        <h2 class="slide-heading">The Ultimate 7-Day AI Student Workflow</h2>
+        <p class="slide-subheading">Here is the exact tool to use on every single day of the week.</p>
+
+        <div class="timeline-container">
+          <div class="timeline-row">
+            <span class="day-badge">MONDAY</span>
+            <div>
+              <strong style="font-size:1rem;">Receive Assignment ➔ TOOL: ChatGPT (GPT-4o)</strong>
+              <p style="font-size:0.9rem; color:var(--text-secondary); margin-top:2px;">Ask ChatGPT to break down rubric requirements into actionable study steps.</p>
+            </div>
+          </div>
+
+          <div class="timeline-row">
+            <span class="day-badge" style="color:var(--accent-purple);">TUESDAY</span>
+            <div>
+              <strong style="font-size:1rem;">Deep Research & Notes ➔ TOOLS: NotebookLM & Perplexity</strong>
+              <p style="font-size:0.9rem; color:var(--text-secondary); margin-top:2px;">Upload PDF sources to NotebookLM & search Perplexity for cited evidence.</p>
+            </div>
+          </div>
+
+          <div class="timeline-row">
+            <span class="day-badge" style="color:var(--accent-emerald);">WEDNESDAY</span>
+            <div>
+              <strong style="font-size:1rem;">First Draft & Slides ➔ TOOLS: Gamma.app & Claude 3.5</strong>
+              <p style="font-size:0.9rem; color:var(--text-secondary); margin-top:2px;">Generate slide outline on Gamma.app and draft main paragraphs in Claude.</p>
+            </div>
+          </div>
+
+          <div class="timeline-row">
+            <span class="day-badge" style="color:var(--accent-amber);">THURSDAY</span>
+            <div>
+              <strong style="font-size:1rem;">Polishing & Proofreading ➔ TOOLS: Grammarly & QuillBot</strong>
+              <p style="font-size:0.9rem; color:var(--text-secondary); margin-top:2px;">Run Grammarly check, format citations, and verify all facts.</p>
+            </div>
+          </div>
+
+          <div class="timeline-row" style="border-color:var(--accent-cyan);">
+            <span class="day-badge" style="color:var(--accent-cyan);">FRIDAY</span>
+            <div>
+              <strong style="font-size:1rem;">Submit & Relax! 🎉 ➔ RESULT: 0 Stress</strong>
+              <p style="font-size:0.9rem; color:var(--text-secondary); margin-top:2px;">Done 2 days before the deadline. Zero weekend stress!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 16: FUNNY AI MISTAKES & HALLUCINATIONS (WIDE CARD)
+         ========================================== -->
+    <section class="slide" id="slide-16" data-title="Funny AI Mistakes">
+      <div class="slide-content">
+        <div class="slide-tag">⚠️ VERIFICATION TOOLS: PERPLEXITY • GOOGLE SCHOLAR • ORIGINAL PDF</div>
+        <h2 class="slide-heading">AI Hallucinations & Dumb Mistakes</h2>
+        <p class="slide-subheading">AI can sound 100% confident while being 100% wrong. Never trust blindly!</p>
+
+        <div class="warning-banner" style="width:100%; max-width:1500px;">
+          <span>🚨 WARNING:</span>
+          <span>AI will sometimes invent fake research papers, fake author names, and wrong math equations!</span>
+        </div>
+
+        <div class="glass-card" style="width:100%; max-width:1500px; text-align:center;">
+          <h4 style="margin-bottom:12px; font-size:1.15rem;">Spot the Fake Citation Challenge:</h4>
+          <p style="color:var(--text-secondary); margin-bottom:16px; font-size:0.95rem;">Which of these research citations was fabricated by AI?</p>
+
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <button class="nav-btn secondary quiz-option-btn" data-correct="false" style="font-size:0.95rem; padding:12px 20px;">
+              A) Einstein, A. (1905). On the Electrodynamics of Moving Bodies. Annalen der Physik.
+            </button>
+            <button class="nav-btn secondary quiz-option-btn" data-correct="true" style="font-size:0.95rem; padding:12px 20px;">
+              B) Johnson, M. & Smith, P. (2023). Quantum Effects of Coffee on University Exam Scores. Journal of Student Science.
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 17: GOLDEN RULES (WIDE GRID)
+         ========================================== -->
+    <section class="slide" id="slide-17" data-title="Golden Rules">
+      <div class="slide-content">
+        <div class="slide-tag">🛡️ CHECKERS: GRAMMARLY PLAGIARISM CHECKER • TURNITIN • CITATION ENGINE</div>
+        <h2 class="slide-heading">The 5 Golden Rules of Student AI</h2>
+        <p class="slide-subheading">Use AI as your tutor and springboard—never as a substitute for your brain.</p>
+
+        <div class="rules-grid">
+          <div class="glass-card rule-card">
+            <h3 style="color:var(--accent-cyan); margin-bottom:8px;">1. Never Copy Blindly</h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem;">Always rephrase in your own genuine voice and check flow.</p>
+          </div>
+
+          <div class="glass-card rule-card">
+            <h3 style="color:var(--accent-purple); margin-bottom:8px;">2. Always Verify Facts</h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem;">Check primary sources on Perplexity or Google Scholar manually.</p>
+          </div>
+
+          <div class="glass-card rule-card">
+            <h3 style="color:var(--accent-emerald); margin-bottom:8px;">3. Learn, Don't Replace</h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem;">Use AI to explain concepts so you actually pass your in-person exams.</p>
+          </div>
+
+          <div class="glass-card rule-card">
+            <h3 style="color:var(--accent-amber); margin-bottom:8px;">4. Respect Privacy</h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem;">Never paste confidential personal data or unreleased university exams.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 18: TOP 10 TOOLKIT DIRECTORY (WIDE GRID)
+         ========================================== -->
+    <section class="slide" id="slide-18" data-title="Top 10 AI Tools Directory">
+      <div class="slide-content">
+        <div class="slide-tag">🧰 DIRECTORY OF ALL 10 ESSENTIAL STUDENT TOOLS</div>
+        <h2 class="slide-heading">Top 10 Student AI Toolkit</h2>
+        <p class="slide-subheading">Filter and search the essential tools every student should bookmark right now.</p>
+
+        <div class="toolkit-controls">
+          <input type="text" id="toolkit-search" class="search-input" placeholder="Search tool by name or feature (e.g. PDF, slides, research, writing)...">
+          <button class="tab-btn toolkit-filter-btn active" data-filter="all">All Tools</button>
+          <button class="tab-btn toolkit-filter-btn" data-filter="Study">Study Tools</button>
+          <button class="tab-btn toolkit-filter-btn" data-filter="Writing">Writing Tools</button>
+          <button class="tab-btn toolkit-filter-btn" data-filter="Research">Research Tools</button>
+        </div>
+
+        <div class="toolkit-grid" id="toolkit-grid">
+          <!-- Dynamically Rendered via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 19: BRAIN RESET, CHEAP DOPAMINE & ARABIC PODCASTS
+         ========================================== -->
+    <section class="slide" id="slide-19" data-title="Brain Reset & Focus Podcasts">
+      <div class="slide-content">
+        <div class="slide-tag">🧠 BRAIN RESET • DEEP WORK & ARABIC PODCASTS</div>
+        <h2 class="slide-heading">How to Beat Cheap Dopamine & Reset Focus</h2>
+        <p class="slide-subheading">Eliminate doomscrolling before studying. Reset your brain's dopamine baseline using top global & Arabic scientific podcasts.</p>
+
+        <div class="showdown-grid" style="width:100%; max-width:1600px; margin-bottom:20px;">
+          <!-- Trap Column -->
+          <div class="glass-card" style="border-color:rgba(244,63,94,0.4); background:rgba(244,63,94,0.03); margin:0;">
+            <h3 style="color:#f43f5e; margin-bottom:10px; font-size:1.2rem;">📱 The Cheap Dopamine Trap (Doomscrolling)</h3>
+            <ul style="line-height:1.8; color:var(--text-secondary); font-size:0.9rem;">
+              <li>❌ <strong>10-Second Video Loops:</strong> Spikes dopamine 300% artificially, frying your attention span.</li>
+              <li>❌ <strong>Context Switching:</strong> Checking notifications every 3 mins destroys deep focus.</li>
+              <li>❌ <strong>Post-Scroll Brain Fog:</strong> Reading a textbook right after scrolling feels painful and impossible.</li>
+            </ul>
+          </div>
+
+          <!-- Protocol Column -->
+          <div class="glass-card" style="border-color:rgba(0,245,160,0.4); background:rgba(0,245,160,0.03); margin:0;">
+            <h3 style="color:var(--accent-emerald); margin-bottom:10px; font-size:1.2rem;">⚡ 3 Science-Backed Focus Reset Hacks</h3>
+            <ul style="line-height:1.8; color:var(--text-secondary); font-size:0.9rem;">
+              <li>✓ <strong>10-Min Dopamine Fast:</strong> Place phone in another room 15 mins BEFORE starting your study block.</li>
+              <li>✓ <strong>40Hz Binaural Beats / Brown Noise:</strong> Listened to through headphones to sync brainwaves into focus.</li>
+              <li>✓ <strong>Non-Sleep Deep Rest (NSDR):</strong> 10-minute guided relaxation to restore mental energy between study blocks.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ARABIC & GLOBAL RECOMMENDED PODCASTS & VIDEOS -->
+        <h3 style="font-size:1.3rem; color:var(--text-primary); margin-bottom:12px; text-align:center;">🎧 Must-Listen Arabic Podcasts & Videos (بودكاستات ومقاطع عربية عن الدوبامين)</h3>
+        
+        <div class="matrix-grid" style="width:100%; max-width:1600px; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));">
+          <!-- ARABIC RESOURCE 1: Thmanyah Finyan -->
+          <div class="glass-card" style="border-color:rgba(0,242,254,0.35);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <span style="font-size:0.75rem; font-weight:800; color:var(--accent-cyan); background:rgba(0,242,254,0.15); padding:3px 10px; border-radius:100px;">🎙️ بودكاست عربي</span>
+              <span class="price-tag" style="font-size:0.75rem;">ثمانية • Thmanyah</span>
+            </div>
+            <h4 style="font-size:1.05rem; color:var(--text-primary); margin-bottom:4px;">بودكاست فنجان (Fnjan Podcast)</h4>
+            <span style="font-size:0.8rem; color:var(--accent-cyan); font-weight:700;">حلقة: "كيف تؤثر التكنولوجيا على عقولنا وتركيزنا؟"</span>
+            <p style="font-size:0.85rem; color:var(--text-secondary); margin-top:8px; line-height:1.5;">
+              <strong>المرجع:</strong> حلقة دقيقة تشرح تأثير مقاطع الفيديو القصيرة (TikTok/Reels) على استنزاف الدوبامين وكيفية استعادة التركيز الدراسي.
+            </p>
+            <a href="https://www.youtube.com/@thmanyah" target="_blank" class="nav-btn secondary" style="margin-top:10px; width:100%; text-align:center; padding:6px; font-size:0.8rem;">🔗 مشاهدة على ثمانية (YouTube)</a>
+          </div>
+
+          <!-- ARABIC RESOURCE 2: El Daheeh -->
+          <div class="glass-card" style="border-color:rgba(255,0,122,0.35);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <span style="font-size:0.75rem; font-weight:800; color:var(--accent-pink); background:rgba(255,0,122,0.15); padding:3px 10px; border-radius:100px;">🎬 فيديو علمي مبسط</span>
+              <span class="price-tag" style="font-size:0.75rem;">الدحيح • El Daheeh</span>
+            </div>
+            <h4 style="font-size:1.05rem; color:var(--text-primary); margin-bottom:4px;">الدحيح: "إدمان الدوبامين" & "المذاكرة"</h4>
+            <span style="font-size:0.8rem; color:var(--accent-pink); font-weight:700;">تقديم: أحمد الغندور (AJ+ عربي)</span>
+            <p style="font-size:0.85rem; color:var(--text-secondary); margin-top:8px; line-height:1.5;">
+              <strong>المرجع:</strong> تبسيط علمي رائع لكيفية عمل مستقبلا الدوبامين، ولماذا تشعر بالملل من المذاكرة بعد السكرولينج.
+            </p>
+            <a href="https://www.youtube.com/@Daheeh" target="_blank" class="nav-btn secondary" style="margin-top:10px; width:100%; text-align:center; padding:6px; font-size:0.8rem;">🔗 شاهد الدحيح على YouTube</a>
+          </div>
+
+          <!-- ARABIC RESOURCE 3: Droos Online -->
+          <div class="glass-card" style="border-color:rgba(0,245,160,0.35);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <span style="font-size:0.75rem; font-weight:800; color:var(--accent-emerald); background:rgba(0,245,160,0.15); padding:3px 10px; border-radius:100px;">💡 بودكاست وتجارب</span>
+              <span class="price-tag" style="font-size:0.75rem;">دروس أونلاين</span>
+            </div>
+            <h4 style="font-size:1.05rem; color:var(--text-primary); margin-bottom:4px;">دروس أونلاين (Droos Online)</h4>
+            <span style="font-size:0.8rem; color:var(--accent-emerald); font-weight:700;">تقديم: أحمد أبو زيد</span>
+            <p style="font-size:0.85rem; color:var(--text-secondary); margin-top:8px; line-height:1.5;">
+              <strong>المرجع:</strong> خطوات عملية للتخلص من إدمان السوشيال ميديا وتطبيق صيام الدوبامين (Dopamine Fasting) للطلاب.
+            </p>
+            <a href="https://www.youtube.com/@DroosOnline4u" target="_blank" class="nav-btn secondary" style="margin-top:10px; width:100%; text-align:center; padding:6px; font-size:0.8rem;">🔗 مشاهدة دروس أونلاين</a>
+          </div>
+
+          <!-- GLOBAL RESOURCE 4: Huberman Lab Podcast -->
+          <div class="glass-card" style="border-color:rgba(127,0,255,0.35);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <span style="font-size:0.75rem; font-weight:800; color:var(--accent-purple); background:rgba(127,0,255,0.15); padding:3px 10px; border-radius:100px;">🎙️ GLOBAL SCIENCE</span>
+              <span class="price-tag" style="font-size:0.75rem;">Huberman Lab</span>
+            </div>
+            <h4 style="font-size:1.05rem; color:var(--text-primary); margin-bottom:4px;">Huberman Lab Podcast</h4>
+            <span style="font-size:0.8rem; color:var(--accent-purple); font-weight:700;">Dr. Andrew Huberman (Stanford Neurobiology)</span>
+            <p style="font-size:0.85rem; color:var(--text-secondary); margin-top:8px; line-height:1.5;">
+              <strong>Ref:</strong> <em>"Controlling Your Dopamine for Motivation & Focus"</em> — The foundational scientific protocol for dopamine reset.
+            </p>
+            <a href="https://www.youtube.com/@hubermanlab" target="_blank" class="nav-btn secondary" style="margin-top:10px; width:100%; text-align:center; padding:6px; font-size:0.8rem;">🔗 Listen on HubermanLab</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 20: REAL-WORLD PROMPT COMPARISON ARENA (WIDE 1680PX)
+         ========================================== -->
+    <section class="slide" id="slide-20" data-title="Real Prompt Showdown">
+      <div class="slide-content">
+        <div class="slide-tag">🏆 PROMPT SHOWDOWN • LAZY PROMPT VS. MASTER FORMULA</div>
+        <h2 class="slide-heading">Real Student Prompt Showdown</h2>
+        <p class="slide-subheading">Compare the actual AI outputs generated when you give a lazy prompt vs. the Master Best Practice Formula!</p>
+
+        <!-- Scenario Tabs Switcher -->
+        <div class="output-tabs" style="margin-bottom:20px;">
+          <button class="tab-btn showdown-tab-btn active" data-scenario="economics">🍕 Macroeconomics: Inflation</button>
+          <button class="tab-btn showdown-tab-btn" data-scenario="email">📧 Email: Professor Extension</button>
+          <button class="tab-btn showdown-tab-btn" data-scenario="physics">🧪 Physics: Thermodynamics Quiz</button>
+        </div>
+
+        <div class="showdown-grid" style="width:100%; max-width:1680px;">
+          <!-- Left: Lazy Prompt Result -->
+          <div class="glass-card" style="border-color:rgba(244,63,94,0.4);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+              <h4 style="color:#f43f5e; font-size:1.1rem;">❌ Average "Lazy" Student Prompt</h4>
+              <span id="showdown-lazy-grade" class="price-tag" style="background:rgba(244,63,94,0.15); color:#f43f5e; border-color:rgba(244,63,94,0.3);">D- (Boring Text)</span>
+            </div>
+            
+            <div id="showdown-lazy-prompt" style="background:rgba(0,0,0,0.3); padding:10px 14px; border-radius:8px; border:1px solid var(--border-color); font-family:monospace; color:#f43f5e; font-size:0.9rem; margin-bottom:12px;">
+              "Explain inflation to me"
+            </div>
+
+            <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:6px;">ACTUAL AI RESPONSE OUTPUT:</div>
+            <div id="showdown-lazy-result" style="background:#0d1117; border:1px solid var(--border-color); border-radius:10px; padding:14px; font-size:0.85rem; color:var(--text-secondary); line-height:1.6; height:200px; overflow-y:auto;">
+              ...
+            </div>
+          </div>
+
+          <!-- Right: Master Best Practice Prompt Result -->
+          <div class="glass-card" style="border-color:rgba(0,245,160,0.4);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+              <h4 style="color:var(--accent-emerald); font-size:1.1rem;">✨ Master Best Practice Prompt</h4>
+              <span id="showdown-master-grade" class="price-tag">S-Tier (100% Exam Ready)</span>
+            </div>
+
+            <div id="showdown-master-prompt" style="background:rgba(0,0,0,0.3); padding:10px 14px; border-radius:8px; border:1px solid var(--border-color); font-family:monospace; color:var(--accent-cyan); font-size:0.85rem; margin-bottom:12px;">
+              "Act as an Economics Professor..."
+            </div>
+
+            <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:6px;">ACTUAL AI RESPONSE OUTPUT:</div>
+            <div id="showdown-master-result" style="background:#0d1117; border:1px solid var(--border-color); border-radius:10px; padding:14px; font-size:0.85rem; color:var(--text-primary); line-height:1.5; height:200px; overflow-y:auto;">
+              ...
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 21: RESOURCES & CHEAT SHEET
+         ========================================== -->
+    <section class="slide" id="slide-21" data-title="Resources & Cheat Sheet">
+      <div class="slide-content">
+        <div class="slide-tag">📚 DIRECT LINKS TO ALL FREE STUDENT TOOLS</div>
+        <h2 class="slide-heading">Free Student AI Resources</h2>
+        <p class="slide-subheading">Bookmark these links to supercharge your entire semester.</p>
+
+        <div class="problems-grid">
+          <div class="glass-card">
+            <h3>🌐 NotebookLM (Google)</h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem; margin-top:4px;">notebooklm.google.com</p>
+            <span class="price-tag" style="margin-top:8px; display:inline-block;">100% Free PDF Explainer</span>
+          </div>
+
+          <div class="glass-card">
+            <h3>🔍 Perplexity AI</h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem; margin-top:4px;">perplexity.ai</p>
+            <span class="price-tag" style="margin-top:8px; display:inline-block;">Free Academic Search</span>
+          </div>
+
+          <div class="glass-card">
+            <h3>📊 Gamma App</h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem; margin-top:4px;">gamma.app</p>
+            <span class="price-tag" style="margin-top:8px; display:inline-block;">Free AI Deck Builder</span>
+          </div>
+
+          <div class="glass-card">
+            <h3>🔬 Consensus Paper Search</h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem; margin-top:4px;">consensus.app</p>
+            <span class="price-tag" style="margin-top:8px; display:inline-block;">Peer-Reviewed AI Search</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 22: FINALE
+         ========================================== -->
+    <section class="slide" id="slide-22" data-title="Finale & Superpowers">
+      <div class="slide-content finale-box">
+        <div class="hero-badge" style="background:rgba(0,245,160,0.15); border-color:rgba(0,245,160,0.4); color:var(--accent-emerald);">🎉 CONGRATULATIONS!</div>
+        
+        <h1 class="quote-hero">
+          "Your Degree Gives You Knowledge.<br>
+          <span class="gradient-text">AI Gives You Speed.</span><br>
+          Together They Give You Superpowers."
+        </h1>
+
+        <div style="font-size:4.5rem; margin:18px 0; animation: bounce-x 2s infinite;">
+          🎓 ⚡ 🚀
+        </div>
+
+        <div class="hero-cta-group">
+          <button class="nav-btn" onclick="window.confettiCannon?.launch()">
+            <span>🎊 Launch Victory Confetti</span>
+          </button>
+
+          <button class="nav-btn secondary" onclick="window.presentation?.goToSlide(0)">
+            <span>🔄 Replay Keynote</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bottom Keynote Control Dock -->
+  <footer class="bottom-nav">
+    <button class="nav-btn secondary" id="prev-slide-btn">
+      <span>← Previous</span>
+    </button>
+
+    <div class="nav-hint">
+      Use <span class="kbd-badge">←</span> <span class="kbd-badge">→</span> or <span class="kbd-badge">Space</span>
+    </div>
+
+    <button class="nav-btn" id="next-slide-btn">
+      <span>Next Slide →</span>
+    </button>
+  </footer>
+
+  <!-- Drawer Table of Contents Overlay -->
+  <div class="drawer-overlay" id="drawer-overlay">
+    <div class="drawer-content">
+      <div class="drawer-header">
+        <h3 style="font-size:1.4rem;">📑 Keynote Slide Index (22 Slides)</h3>
+        <button class="icon-btn" id="drawer-close-btn">✕</button>
+      </div>
+      <div class="drawer-grid" id="drawer-grid"></div>
+    </div>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="assets/js/canvas.js"></script>
+  <script src="assets/js/slides.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
